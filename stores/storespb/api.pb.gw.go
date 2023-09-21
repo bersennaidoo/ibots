@@ -13,7 +13,6 @@ import (
 	"io"
 	"net/http"
 
-	extStorespb "github.com/bersennaidoo/ibots/stores/storespb/storespb"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
 	"google.golang.org/grpc"
@@ -32,8 +31,8 @@ var _ = runtime.String
 var _ = utilities.NewDoubleArray
 var _ = metadata.Join
 
-func request_StoresService_CreateStore_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.CreateStoreRequest
+func request_StoresService_CreateStore_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq CreateStoreRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -49,8 +48,8 @@ func request_StoresService_CreateStore_0(ctx context.Context, marshaler runtime.
 
 }
 
-func local_request_StoresService_CreateStore_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.CreateStoreRequest
+func local_request_StoresService_CreateStore_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq CreateStoreRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -66,8 +65,8 @@ func local_request_StoresService_CreateStore_0(ctx context.Context, marshaler ru
 
 }
 
-func request_StoresService_GetStore_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetStoreRequest
+func request_StoresService_GetStore_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetStoreRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -92,8 +91,8 @@ func request_StoresService_GetStore_0(ctx context.Context, marshaler runtime.Mar
 
 }
 
-func local_request_StoresService_GetStore_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetStoreRequest
+func local_request_StoresService_GetStore_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetStoreRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -118,8 +117,8 @@ func local_request_StoresService_GetStore_0(ctx context.Context, marshaler runti
 
 }
 
-func request_StoresService_GetStores_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetStoresRequest
+func request_StoresService_GetStores_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetStoresRequest
 	var metadata runtime.ServerMetadata
 
 	msg, err := client.GetStores(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -127,8 +126,8 @@ func request_StoresService_GetStores_0(ctx context.Context, marshaler runtime.Ma
 
 }
 
-func local_request_StoresService_GetStores_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetStoresRequest
+func local_request_StoresService_GetStores_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetStoresRequest
 	var metadata runtime.ServerMetadata
 
 	msg, err := server.GetStores(ctx, &protoReq)
@@ -136,8 +135,8 @@ func local_request_StoresService_GetStores_0(ctx context.Context, marshaler runt
 
 }
 
-func request_StoresService_EnableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.EnableParticipationRequest
+func request_StoresService_EnableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq EnableParticipationRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -170,8 +169,8 @@ func request_StoresService_EnableParticipation_0(ctx context.Context, marshaler 
 
 }
 
-func local_request_StoresService_EnableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.EnableParticipationRequest
+func local_request_StoresService_EnableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq EnableParticipationRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -204,8 +203,8 @@ func local_request_StoresService_EnableParticipation_0(ctx context.Context, mars
 
 }
 
-func request_StoresService_DisableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.DisableParticipationRequest
+func request_StoresService_DisableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq DisableParticipationRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -230,8 +229,8 @@ func request_StoresService_DisableParticipation_0(ctx context.Context, marshaler
 
 }
 
-func local_request_StoresService_DisableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.DisableParticipationRequest
+func local_request_StoresService_DisableParticipation_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq DisableParticipationRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -256,8 +255,8 @@ func local_request_StoresService_DisableParticipation_0(ctx context.Context, mar
 
 }
 
-func request_StoresService_GetParticipatingStores_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetParticipatingStoresRequest
+func request_StoresService_GetParticipatingStores_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetParticipatingStoresRequest
 	var metadata runtime.ServerMetadata
 
 	msg, err := client.GetParticipatingStores(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -265,8 +264,8 @@ func request_StoresService_GetParticipatingStores_0(ctx context.Context, marshal
 
 }
 
-func local_request_StoresService_GetParticipatingStores_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetParticipatingStoresRequest
+func local_request_StoresService_GetParticipatingStores_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetParticipatingStoresRequest
 	var metadata runtime.ServerMetadata
 
 	msg, err := server.GetParticipatingStores(ctx, &protoReq)
@@ -274,8 +273,8 @@ func local_request_StoresService_GetParticipatingStores_0(ctx context.Context, m
 
 }
 
-func request_StoresService_AddProduct_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.AddProductRequest
+func request_StoresService_AddProduct_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AddProductRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -308,8 +307,8 @@ func request_StoresService_AddProduct_0(ctx context.Context, marshaler runtime.M
 
 }
 
-func local_request_StoresService_AddProduct_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.AddProductRequest
+func local_request_StoresService_AddProduct_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AddProductRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -342,8 +341,8 @@ func local_request_StoresService_AddProduct_0(ctx context.Context, marshaler run
 
 }
 
-func request_StoresService_RemoveProduct_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.RemoveProductRequest
+func request_StoresService_RemoveProduct_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq RemoveProductRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -368,8 +367,8 @@ func request_StoresService_RemoveProduct_0(ctx context.Context, marshaler runtim
 
 }
 
-func local_request_StoresService_RemoveProduct_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.RemoveProductRequest
+func local_request_StoresService_RemoveProduct_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq RemoveProductRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -394,8 +393,8 @@ func local_request_StoresService_RemoveProduct_0(ctx context.Context, marshaler 
 
 }
 
-func request_StoresService_GetCatalog_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetCatalogRequest
+func request_StoresService_GetCatalog_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetCatalogRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -420,8 +419,8 @@ func request_StoresService_GetCatalog_0(ctx context.Context, marshaler runtime.M
 
 }
 
-func local_request_StoresService_GetCatalog_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetCatalogRequest
+func local_request_StoresService_GetCatalog_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetCatalogRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -446,8 +445,8 @@ func local_request_StoresService_GetCatalog_0(ctx context.Context, marshaler run
 
 }
 
-func request_StoresService_GetProduct_0(ctx context.Context, marshaler runtime.Marshaler, client extStorespb.StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetProductRequest
+func request_StoresService_GetProduct_0(ctx context.Context, marshaler runtime.Marshaler, client StoresServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetProductRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -472,8 +471,8 @@ func request_StoresService_GetProduct_0(ctx context.Context, marshaler runtime.M
 
 }
 
-func local_request_StoresService_GetProduct_0(ctx context.Context, marshaler runtime.Marshaler, server extStorespb.StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq extStorespb.GetProductRequest
+func local_request_StoresService_GetProduct_0(ctx context.Context, marshaler runtime.Marshaler, server StoresServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetProductRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -502,7 +501,7 @@ func local_request_StoresService_GetProduct_0(ctx context.Context, marshaler run
 // UnaryRPC     :call StoresServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
 // Note that using this registration option will cause many gRPC library features to stop working. Consider using RegisterStoresServiceHandlerFromEndpoint instead.
-func RegisterStoresServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server extStorespb.StoresServiceServer) error {
+func RegisterStoresServiceHandlerServer(ctx context.Context, mux *runtime.ServeMux, server StoresServiceServer) error {
 
 	mux.Handle("POST", pattern_StoresService_CreateStore_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
@@ -785,15 +784,15 @@ func RegisterStoresServiceHandlerFromEndpoint(ctx context.Context, mux *runtime.
 // RegisterStoresServiceHandler registers the http handlers for service StoresService to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
 func RegisterStoresServiceHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterStoresServiceHandlerClient(ctx, mux, extStorespb.NewStoresServiceClient(conn))
+	return RegisterStoresServiceHandlerClient(ctx, mux, NewStoresServiceClient(conn))
 }
 
 // RegisterStoresServiceHandlerClient registers the http handlers for service StoresService
-// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "extStorespb.StoresServiceClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "extStorespb.StoresServiceClient"
+// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "StoresServiceClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "StoresServiceClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "extStorespb.StoresServiceClient" to call the correct interceptors.
-func RegisterStoresServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client extStorespb.StoresServiceClient) error {
+// "StoresServiceClient" to call the correct interceptors.
+func RegisterStoresServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client StoresServiceClient) error {
 
 	mux.Handle("POST", pattern_StoresService_CreateStore_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())

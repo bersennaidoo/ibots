@@ -1,4 +1,4 @@
-module eda-in-golang
+module github.com/bersennaidoo/ibots
 
 go 1.17
 
